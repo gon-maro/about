@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中尾のホームページ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <div class="load-logo"><img src="art\img\logo.svg" alt="" style="width: 300px;height: auto;"></div>
+    <div class="load-cover"></div>
+    <div class="oc-manu">
+        <div class="A">三</div>
+        <div class="B">
+            <div class="links">
+                <a href="#news"><p class="oc-manu-h1">News</p></a>
+                <a href="#detayo1"><p class="oc-manu-h1">Points</p></a>
+                <a href="#contents"><p class="oc-manu-h1">Contents</p></a>
+                <a href="#access"><p class="oc-manu-h1">Access</p></a>
+                <a href="#contact"><p class="oc-manu-h1">Contacr</p></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="top">
+        <div class="movie">
+            <video src="art\video\back.mp4" loop autoplay muted playsinline class="top-video"></video>
+        </div>
+        <div class="out-top-titele">
+            <p class="top-titele">一般的な哺乳類</p>
+        </div>
+    </div>
+    <div class="heder">
+        <div class="heder-top">
+            <img class="logo" src="art\img\logo.svg">
+        </div>
+        <div class="heder-under">
+            <table class="heder-manu">
+                <tr>
+                    <td><a onclick="scroll_news()"><p class="heder-manu-td">news</p></a></td>
+                    <td><a onclick="scroll_detayo1()"><p class="heder-manu-td">points</p></a></td>
+                    <td><a onclick="scrollBlue()"><p class="heder-manu-td">news</p></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-in-1">
+            <br><br><br><br>
+            <iframe id="news" class="news" src="news.html" frameborder="0"></iframe>
+        </div>
+        <br><br><br>
+
+        <div class="out-detayo">
+            <div id="detayo1"><!--動かす要素-->
+                <div class="in-detayo">
+                    <div class="out-points">
+                        <h2 class="point">Point.01</h2>
+                        <h1 class="point_name" style="margin-top: -10px;">奴が家にいる。とらまろという名の猫が。</h1>
+                        <p class="point-p" style="font-size: 18px;margin-top: -15px;">見た目がたぬきっぽいような気もしますが彼は猫です。<br>大多数の猫に対して比較的大きいですが、人間と比べると小さいのでちいかわ。</p>
+                    </div>
+                    <img class="point-img" src="art\img\PXL_20240516_233108408.jpg" alt="" >
+                </div>
+            </div>
+            <div id="detayo2"><!--動かす要素-->
+                <div class="in-detayo">
+                    <img class="point-img" src="art\img\okra-7357328_1280.jpg" alt="" >
+                    <div class="out-points">
+                        <h2 class="point">Point.02</h2>
+                        <h1 class="point_name" style="margin-top: -10px;">ねばねばした食べ物をさも美味しそうに食べます。</h1>
+                        <p class="point-p" style="font-size: 18px;margin-top: -15px;">納豆おいしい<br>とろろおいしい<br>オクラおいしい<br>ねばばばば</p>
+                    </div>
+                </div>
+            </div>
+            <div id="detayo3"><!--動かす要素-->
+                <div class="in-detayo">
+                    <div class="out-points">
+                        <h2 class="point">Point.03</h2>
+                        <h1 class="point_name" style="margin-top: -10px;">なんかしゃがむときに膝がポキポキ言います。</h1>
+                        <p class="point-p" style="font-size: 18px;margin-top: -15px;">体育の時の準備運動で屈伸するじゃないですか。<br>あんとき、膝から弾けるようなポキポキサウンドを響き渡らせちゃうんですよ。</p>
+                    </div>
+                    <img class="point-img" src="art\img\freestocks-RUfnlBA_9Iw-unsplash.jpg" alt="" >
+                </div>
+            </div>
+            <script src="script/sec-animation.js"></script>
+        </div>
+
+        <div class="out-works" id="contents">
+            <iframe class="works" src="works.html" frameborder="0" loading="lazy"></iframe>
+        </div>
+
+        <div class="access" id="access">
+            <iframe class="in-access" src="access.html" frameborder="0" loading="lazy"></iframe>
+        </div>
+
+        <div class="out-contact" id="contact">
+            <iframe class="contact" src="contact.html" frameborder="0" loading="lazy"></iframe>
+        </div>
+
+        <div class="footer">
+            <h2>株敷外車 ナカオ</h2>
+            <p>NAKAO Cornpotage</p>
+            <h5 style="color: #636363;">©NAKAO.2024</h5>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        animation-name: fadein;
+        animation-duration: 0.6s;
+        animation-fill-mode: both;
+        animation-delay: 0.4s;
+        position: relative;
+    }
+    @keyframes fadein{
+        0%{
+            opacity: 0;
+            top: -80px;
+        }
+        100%{
+            opacity: 1;
+            top: 0;
+        }
+    }
+    .scroll-container {
+        width: 100%;
+        height: 380px;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    .content {
+        display: flex;
+        margin-top: 10px;
+    }
+    .content-link{
+        margin: 0 10px 0 10px;
+        text-decoration: none;
+    }
+    .in-link{
+        width: 300px;
+        height: 350px;
+        box-shadow: #00000030 5px 5px 20px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .content-img{
+        width: 100%;
+        height: auto;
+    }
+    p{
+        color: #000;
+        position: relative;
+        top: -10px;
+        left: 10px;
+    }
+    .button-left{
+        background-color: #000000;
+        width: 30px;
+        height: 30px;
+        border: none;
+        clip-path: polygon(0 0, 0% 100%, 100% 50%);
+        transform: rotate(180deg);
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .button-right{
+        background-color: #000000;
+        width: 30px;
+        height: 30px;
+        border: none;
+        clip-path: polygon(0 0, 0% 100%, 100% 50%);
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    .buttons{
+        position: absolute;
+        left: calc(50% - 50px);
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <h1>Contents</h1>
+    <div class="scroll-container" id="scrollableSection">
+        <div class="content">
+            <a href="toramaro-talk.html" class="content-link" target="_top">
+                <div class="in-link">
+                    <img class="content-img" src="art\img\toramaro_talk-sum.png" alt="">
+                    <p>例の猫とチャットができるよ</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="buttons">
+        <button onclick="scroll_left()" class="button-left"></button>
+        <button onclick="scroll_right()" class="button-right"></button>
+    </div>
+    <script>
+        function scroll_right() {
+            var container = document.getElementById("scrollableSection");
+            container.scrollBy({ left: 320, behavior: 'smooth' });
+        }
+
+        function scroll_left() {
+            var container = document.getElementById("scrollableSection");
+            container.scrollBy({ left: -320, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

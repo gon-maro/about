@@ -1,0 +1,116 @@
+body{
+	font-family: "Zen Kaku Gothic Antique", sans-serif;
+	overflow-x: hidden;
+	background-color: #ffffff00;
+	animation-name: fadein;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-delay: 0.3s;
+}
+@keyframes fadein{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.many-news-top{font-size: 15px;color: #c4c4c4;margin-top: -15px;white-space: nowrap;}
+.many-news-under{font-size: 15px;color: #c4c4c4;margin-bottom: -2px;white-space: nowrap;position: fixed;bottom: 0;}
+.titele{font-size: 30px;}
+
+.content{width: calc(100% - 20px);margin: 10px auto 0px auto;padding: 1px 0 0 15px;border: solid #dbdbdb;border-width: 1px 0 1px 0;}
+.content:hover{background-color: #fff;transition: 0.2s;}
+.content > a{color: #000;text-decoration: none;}
+.content > a > h1{font-size: 20px;}
+.content > a > p{font-size: 15px;color: #494949;margin-top: -10px;}
+
+.tab-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	padding: 0 0 20px;
+}
+
+.tab-label {
+	color: rgb(0, 0, 0);
+	cursor: pointer;
+	flex: 1;
+	font-weight: bold;
+	order: -1;
+	padding: 12px 24px;
+	position: relative;
+	text-align: center;
+	transition: cubic-bezier(0.4, 0, 0.2, 1) .2s;
+	user-select: none;
+	white-space: nowrap;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.tab-label:hover {
+	background: #00000010
+}
+
+.tab-switch:checked + .tab-label {
+	color: #000000;
+}
+
+.tab-label::after {
+	background: #95e7f1;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 5px;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	transform: translateX(100%);
+	transition: cubic-bezier(0.4, 0, 0.2, 1) .2s 80ms;
+	width: 100%;
+	z-index: 1;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-switch:checked ~ .tab-label::after {
+	transform: translateX(-100%);
+}
+
+.tab-switch:checked + .tab-label::after {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.tab-content {
+	height:0;
+	opacity:0;
+	padding: 0 20px;
+	pointer-events:none;
+	transform: translateX(-30%);
+	transition: transform .3s 80ms, opacity .3s 80ms;
+	width: 100%;
+}
+
+.tab-switch:checked ~ .tab-content {
+	transform: translateX(30%);
+}
+
+.tab-switch:checked + .tab-label + .tab-content {
+	height: auto;
+	opacity: 1;
+	order: 1;
+	pointer-events:auto;
+	transform: translateX(0);
+}
+
+.tab-wrap::after {
+	content: '';
+	height: 20px;
+	order: -1;
+	width: 100%;
+}
+
+.tab-switch {
+	display: none;
+}

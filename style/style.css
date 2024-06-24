@@ -1,0 +1,248 @@
+html{overflow-x: hidden;}
+body{font-family: "Zen Kaku Gothic Antique", sans-serif;}
+.load-logo{transform: translateX(-50%);position: fixed;z-index: 1001;top: 40vh;left: 48vw; animation-name: load-logo;animation-fill-mode: forwards;animation-duration: 1.2s;width: 300px;height: auto;}
+@keyframes load-logo{0%{opacity: 1;}50%{opacity: 1;}100%{opacity: 0;}}
+.load-cover{background-color: #ffffff;position: fixed;top: 0;left: 0;z-index: 1000;width: 100vw;height: 1000vh;animation-name: load-cover;animation-fill-mode: both;animation-duration: 1s;animation-delay: 0.8s;box-shadow: #00000025 0px 20px 40px;}
+@keyframes load-cover{0%{height: 100vh;}100%{height: 0vh;}}
+a{text-decoration: none;}
+
+.oc-manu{position: fixed;top: 30px;z-index: 100;width: 100vw;left: 0;}
+.A{background-color: #95e7f1;width: 70px;height: 60px;margin-left: 30px;z-index: 200;border-radius: 27px;position: relative;text-align: center;font-size: 30px;padding-top: 10px;cursor: pointer;}
+.B{position: fixed;top: 0;width: 0;height: 100vh;max-width: 0; overflow-x: hidden;opacity: 0; transition: 0.5s;border-radius: 0 40px 40px 0;}
+.C{display: block;height: 100vh;width: calc(100vw - 80px);max-width: 500px; position: fixed;top: 0; background-color: #ffffffd2;backdrop-filter: Blur(15px);-webkit-backdrop-filter: blur(15px);opacity: 1;border-radius: 0 40px 40px 0;}
+.links{margin: 40px 0 0 0;text-align: center;font-weight: bold;white-space: nowrap;}
+.oc-manu-h1{font-size: 25px;margin: 30px 0 30px 0;color: #000000;}
+
+.top{position:fixed;top: 0;right: 0;width: 100%;height: 95vh;overflow: hidden;}
+.top-video{height: auto;width: 100%;transform: translateX(-50%);position: relative;left: 50vw;}
+@media screen and (max-width:1600px) {.top-video{height: 100vh;width: auto;}}
+.top-titele{color:#fff;font-size: 40px;position: absolute;top: 35vh;right: 5vw;font-weight: bold;}
+.movie::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	background-image: radial-gradient(#111 30%, transparent 31%), radial-gradient(#111 30%, transparent 31%);
+	background-size: 4px 4px;
+	background-position: 0 0, 2px 2px;
+}
+
+.heder{background-color: #ffffff;width: 99.3vw;height: fit-content;z-index: 5;position: relative;top: 82vh;right: 8px;left: a;border-radius: 80px 80px 0px 0px;}
+.heder-top{height: fit-content;width: 100%;max-width: 1500px;margin: 0px auto -50px auto;position: relative;top: -40px;}
+.logo{height: auto;width: 50%;max-width: 400px;padding: 10px 30px 0px 30px;background-color: #fff;border-radius: 8px;}
+.heder-under{width: 100%;background-color: #ffffff;border-radius: 0 999px 0 0;}
+.heder-manu{width: 100vw;max-width: 1500px;margin: 0px auto 0px auto;}
+.heder-manu-td {font-size: 22px;text-align: center;border-left: solid 1px #dadada;border-right: solid 1px #dadada;margin-left: -5px;color: #000;cursor: pointer;}
+.heder-manu-td:hover{background-color: #00000012;transition: 0.2s;}
+.main{width: 100%;background-color: #ffffff;position: absolute;top: 92vh;margin:0px -16px 0px -8px;}
+.main-in-1{width: 100%;max-width: 1000px;margin: 0 auto 0 auto;}
+.news{height: 500px;width: calc(100% - 30px);border-radius: 0px;margin: 0 15px 0 15px;border: solid #f1f1f1;border-width: 0 2px 0 2px;background-color: #f7f7f7;}
+
+#detayo1 {/*アニメーション初期値*/
+	background-color: #95e7f1;
+	width: 100%;
+	height: 1500px;
+	border-radius: 80px 0 0 0;
+	opacity: 0;
+	position: relative;
+	left: 50vw;
+}
+
+#detayo2 {/*アニメーション初期値*/
+	background-color: #ffffff;
+	width: 100%;
+	height: 1000px;
+	border-radius: 0 80px 0 0;
+	opacity: 0;
+	position: relative;
+	top: -1000px;
+	right: 50vw;
+}
+#detayo3 {/*アニメーション初期値*/
+	background-color: #95e7f1;
+	width: 100%;
+	height: 500px;
+	border-radius: 80px 0 0 0;
+	opacity: 0;
+	position: relative;
+	top: -1500px;
+	left: 50vw;
+}
+
+.alpha1 {/*アニメーション設定*/
+	animation-name: alpha1;
+	animation-duration: 0.8s;
+	animation-fill-mode:forwards;
+}
+.alpha2 {/*アニメーション設定*/
+	animation-name: alpha2;
+	animation-duration: 0.8s;
+	animation-fill-mode:forwards;
+	animation-delay: 0.5s;
+}
+.alpha3 {/*アニメーション設定*/
+	animation-name: alpha3;
+	animation-duration: 0.8s;
+	animation-fill-mode:forwards;
+	animation-delay: 1s;
+}
+
+@keyframes alpha1 {/*キーフレーム*/
+	0% {
+		left: 50vw;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
+	}
+}
+@keyframes alpha2 {/*キーフレーム*/
+	0% {
+		right: 50vw;
+		opacity: 0;
+	}
+	100% {
+		right: 0;
+		opacity: 1;
+	}
+}
+@keyframes alpha3 {/*キーフレーム*/
+	0% {
+		left: 50vw;
+		opacity: 0;
+	}
+	100% {
+		left: 0;
+		opacity: 1;
+	}
+}
+.out-detayo{
+	height: 1500px;
+	overflow: hidden;
+}
+.in-detayo{
+	width: calc(100% - 100px);
+	max-width: 1200px;
+	height: 420px;
+	margin: 0 auto 0 auto;
+	padding: 40px 0 0 0;
+	display: flex;
+}
+.out-points{
+	width: 100%;
+	max-width: 700px;
+}
+#detayo2 > .in-detayo > .out-points{
+	padding-left: 20px;
+}
+.point-img{
+	width: 500px;
+	height: auto;
+	margin: auto 0 auto 0;
+	border-radius: 30px;
+}
+@media screen and (max-width: 1200px){
+	#detayo1{
+		height: 2100px;
+	}
+	#detayo2{
+		height: 1400px;
+		top: -1400px;
+	}
+	#detayo3{
+		height: 700px;
+		top: -2100px;
+	}
+	.out-detayo{
+		height: 2100px;
+	}
+
+	.in-detayo{
+		display: block;
+		width: 100%;
+		height: 670px;
+		margin: 0 auto 0 auto;
+		padding: 10px 0px 0 0px;
+		text-align: center;
+		overflow: hidden;
+	}
+	.out-points{
+		width: calc(100% - 60px);
+		margin: 0 auto 0 auto;
+	}
+	#detayo2 > .in-detayo > .out-points{
+		padding-left: 0;
+	}
+	.point-img{
+		width: calc(100vw - 15px);
+		max-width: 600px;
+		margin-top: 10px;
+		border-radius: 80px 10px 80px 10px;
+	}
+	#detayo2 > .in-detayo > .point-img{
+		border-radius: 0px 80px 10px 80px;
+		margin-top: -10px;
+	}
+	.out-points > h1,p{
+		text-align: left;
+	}
+}
+
+
+.out-works{
+	width: calc(100% - 40px);
+	max-width: 1200px;
+	margin: 0 auto 0 auto;
+	height: 540px;
+	padding-top: 20px;
+}
+.works{
+	width: 100%;
+	height: 540px;
+	overflow-y: hidden;
+}
+
+
+.access{
+	width: calc(100% - 40px);
+	max-width: 1200px;
+	margin: 0 auto 0 auto;
+	height: 600px;
+	padding-top: 20px;
+}
+
+
+.in-access{
+	width: 100%;
+	height: 600px;
+	overflow-y: hidden;
+}
+
+.out-contact{
+	width: calc(100% - 40px);
+	max-width: 1200px;
+	margin: 0 auto 0 auto;
+	height: 250px;
+}
+.contact{
+	width: 100%;
+	height: 250px;
+	overflow-y: hidden;
+}
+.footer{
+	height: 150px;
+	width: 100%;
+	background-color: #1d1d1d;
+	color: #ffffff;
+	padding: 5px 15px 5px 15px;
+	text-align: center;
+}
+.footer > p{
+	position: relative;
+	top: -20px;
+}

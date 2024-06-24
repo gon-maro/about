@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>とらまろとおしゃべりしてみよう</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Zen Kaku Gothic Antique", sans-serif;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 0 auto;
+        }
+        .out-output{
+            width: 100%;
+            max-width: 600px;
+            height: calc(100vh - 20px);
+            background-color: #bad2f1;
+        }
+        .hed{
+            height: 30px;
+            padding: 15px;
+            font-weight: 700;
+        }
+        #output {
+            padding: 0 10px 0 10px; 
+            height: calc(100vh - 125px);
+            overflow-y: scroll;
+        }
+        .form{
+            width: 100%;
+            max-width: 600px;
+            height: 50px;
+            background-color: #ffffff;
+            position: fixed;
+            bottom: 0;
+            padding-top: 5px;
+        }
+        .form > table{
+            width: 100%;
+
+            tr{
+                height: 40px;
+                margin: 0;
+            }
+            th{
+                width: calc(100% - 50px);
+            }
+            td{
+                width: 50px;
+            }
+        }
+        input{
+            width: calc(100% - 20px);
+            height: 38px;
+            border: none;
+            background-color: #ebebeb;
+            border-radius: 50px;
+            padding: 0 0 0 10px;
+        }
+        button{
+            width: 100%;
+            height: 38px;
+            border: none;
+            background-color: #1670f8;
+            color: #ffffff;
+            border-radius: 50px;
+        }
+        .message {
+            color: #000;
+            text-align: right;
+            background-color: #4fe46d;
+            width: calc(100% -100px);
+            margin-top: 20px;
+            margin-left: 100px;
+            padding: 10px;
+            border-radius: 20px 20px 0px 20px;
+        }
+        .response {
+            color: #000;
+            background-color: #ffffff;
+            width: calc(100% -100px);
+            margin-top: 20px;
+            margin-right: 100px;
+            padding: 10px;
+            border-radius: 20px 20px 20px 0px;
+            animation-name: reply;
+            animation-duration: 0s;
+            animation-fill-mode: both;
+            animation-delay: 1s;
+        }
+        @keyframes reply{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="out-output">
+        <div class="hed">
+            ＜　とらまろ
+        </div>
+        <div id="output">
+            <!--ここに追加されるわよ-->
+        </div>
+    </div>
+
+    <div class="out-form">
+        <div class="form">
+            <table>
+                <tr>
+                    <th><input type="text" id="userInput" placeholder="ここにテキストを入力"></th>
+                    <td><button id="addButton">送信</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const addButton = document.getElementById('addButton');
+        const userInput = document.getElementById('userInput');
+        const output = document.getElementById('output');
+
+        //ランダムな返信リスト
+        const responses = [
+            "にゃー","ほわー","ほにゃー","シャー","ごろにゃー"
+        ];
+
+        addButton.addEventListener('click', function() {
+            //入力内容取得
+            const text = userInput.value;
+
+            if (text.trim() !== '') {
+                //送信内容div作成
+                const newItem = document.createElement('div');
+                newItem.textContent = text;
+                newItem.classList.add('message');
+
+                //送信内容を追加
+                output.appendChild(newItem);
+
+                //ランダムに返信を選択
+                const randomIndex = Math.floor(Math.random() * responses.length);
+                const responseText = responses[randomIndex];
+
+                // 返信div作成
+                const responseItem = document.createElement('div');
+                responseItem.textContent = responseText;
+                responseItem.classList.add('response');
+
+                //返信を追加
+                output.appendChild(responseItem),
+
+                //入力欄をリセット
+                userInput.value = '';
+            } else {
+                alert('何かしらは入力してね');
+            }
+        });
+    </script>
+</body>
+</html>

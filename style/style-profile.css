@@ -1,0 +1,7 @@
+body{font-family: "Zen Kaku Gothic Antique", sans-serif;overflow-x: hidden;background-color: #95e6f100;}
+
+.out-hed{width: 100%;}
+.hed{background-color: #fff;width: 200px;height: 200px;border-radius: 999px;text-align: center;position: fixed;top: 80px;left: calc(50vw - 100px);border: solid 2px;border-color: #95e7f1 #95e7f1 #00000000 #00000000;transform: rotate(-45deg);}
+.hed > h1{font-size: 25px;position: relative;top: 50px;left: 15px; transform: rotate(45deg);}
+
+.main{width: 90%;max-width: 1200px;background-color: rgb(255, 255, 255);height: calc(100vh - 300px);margin: 180px auto 0 auto;border-radius: 20px;border: solid 2px #95e7f1;}
