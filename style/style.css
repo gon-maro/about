@@ -27,7 +27,7 @@ a{text-decoration: none;}
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0,0,0,0.5);
 	background-image: radial-gradient(#111 30%, transparent 31%), radial-gradient(#111 30%, transparent 31%);
