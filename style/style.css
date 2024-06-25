@@ -17,7 +17,7 @@ a{text-decoration: none;}
 .links{margin: 40px 0 0 0;text-align: center;font-weight: bold;white-space: nowrap;}
 .oc-manu-h1{font-size: 25px;margin: 30px 0 30px 0;color: #000000;}
 
-.top{position:fixed;top: 0;right: 0;width: calc(100% - 5px);height: 95vh;overflow: hidden;}
+.top{position:fixed;top: 0;right: -10px;width: calc(100% - 5px);height: 95vh;overflow: hidden;}
 .top-video{height: auto;width: 100%;transform: translateX(-50%);position: relative;left: 50vw;}
 @media screen and (max-width:1600px) {.top-video{height: 100vh;width: auto;}}
 .top-titele{color:#fff;font-size: 40px;position: absolute;top: 35vh;right: 5vw;font-weight: bold;}
