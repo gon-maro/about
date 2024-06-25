@@ -42,7 +42,7 @@ a{text-decoration: none;}
 .heder-manu{width: 100vw;max-width: 1500px;margin: 0px auto 0px auto;}
 .heder-manu-td {font-size: 22px;text-align: center;border-left: solid 1px #dadada;border-right: solid 1px #dadada;margin-left: -5px;color: #000;cursor: pointer;}
 .heder-manu-td:hover{background-color: #00000012;transition: 0.2s;}
-.main{width: 100%;background-color: #ffffff;position: absolute;top: 92vh;margin:0px -16px 0px -8px;}
+.main{width: 100vw;background-color: #ffffff;position: absolute;top: 92vh;margin:0px -16px 0px -8px;}
 .main-in-1{width: 100%;max-width: 1000px;margin: 0 auto 0 auto;}
 .news{height: 500px;width: calc(100% - 30px);border-radius: 0px;margin: 0 15px 0 15px;border: solid #f1f1f1;border-width: 0 2px 0 2px;background-color: #f7f7f7;}
 
