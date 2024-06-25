@@ -1,4 +1,7 @@
-html{overflow-x: hidden;}
+html{
+	overflow-x: hidden;
+	width:calc(100vw - 10px)
+}
 body{font-family: "Zen Kaku Gothic Antique", sans-serif;}
 .load-logo{transform: translateX(-50%);position: fixed;z-index: 1001;top: 40vh;left: 48vw; animation-name: load-logo;animation-fill-mode: forwards;animation-duration: 1.2s;width: 300px;height: auto;}
 @keyframes load-logo{0%{opacity: 1;}50%{opacity: 1;}100%{opacity: 0;}}
