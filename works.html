@@ -11,21 +11,6 @@
 <style>
     body{
         font-family: "Zen Kaku Gothic Antique", sans-serif;
-        animation-name: fadein;
-        animation-duration: 0.6s;
-        animation-fill-mode: both;
-        animation-delay: 0.4s;
-        position: relative;
-    }
-    @keyframes fadein{
-        0%{
-            opacity: 0;
-            top: -80px;
-        }
-        100%{
-            opacity: 1;
-            top: 0;
-        }
     }
     .scroll-container {
         width: 100%;
@@ -85,22 +70,45 @@
         left: calc(50% - 50px);
         margin-top: 20px;
     }
+
+    #main {/*アニメーション初期値*/
+        opacity: 0;
+        position: relative;
+        top: -100px;
+    }
+    .alpha1 {/*アニメーション設定*/
+        animation-name: alpha1;
+        animation-duration: 0.8s;
+        animation-fill-mode:forwards;
+    }
+    @keyframes alpha1 {/*キーフレーム*/
+        0% {
+            top: -100px;
+            opacity: 0;
+        }
+        100% {
+            top: 0;
+            opacity: 1;
+        }
+    }
 </style>
 <body>
-    <h1>Contents</h1>
-    <div class="scroll-container" id="scrollableSection">
-        <div class="content">
-            <a href="toramaro-talk.html" class="content-link" target="_top">
-                <div class="in-link">
-                    <img class="content-img" src="art\img\toramaro_talk-sum.png" alt="">
-                    <p>例の猫とチャットができるよ</p>
-                </div>
-            </a>
+    <div id="main">
+        <h1>Contents</h1>
+        <div class="scroll-container" id="scrollableSection">
+            <div class="content">
+                <a href="toramaro-talk.html" class="content-link" target="_top">
+                    <div class="in-link">
+                        <img class="content-img" src="art\img\toramaro_talk-sum.png" alt="">
+                        <p>例の猫とチャットができるよ</p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="buttons">
-        <button onclick="scroll_left()" class="button-left"></button>
-        <button onclick="scroll_right()" class="button-right"></button>
+        <div class="buttons">
+            <button onclick="scroll_left()" class="button-left"></button>
+            <button onclick="scroll_right()" class="button-right"></button>
+        </div>
     </div>
     <script>
         function scroll_right() {
@@ -112,6 +120,28 @@
             var container = document.getElementById("scrollableSection");
             container.scrollBy({ left: -320, behavior: 'smooth' });
         }
+
+
+
+        let gazou1 = document.getElementById("main");//動かす要素の変数宣言
+
+        function kantan(entries) {
+            if (entries[0].intersectionRatio == 0) {
+                return;
+            }
+            else
+            {
+                gazou1.classList.add("alpha1");//動かす要素にクラスを付与
+            }
+        };
+
+        let options = {
+            threshold:0.4
+        };
+
+        let observer = new IntersectionObserver(kantan,options);
+
+        observer.observe(gazou1);//観察開始
     </script>
 </body>
 </html>
