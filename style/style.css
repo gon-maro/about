@@ -1,10 +1,5 @@
-body{
-	font-family: "Zen Kaku Gothic Antique", sans-serif;
-	position: relative;
-	right:0;
-	overflow-x: hidden;
-	width: 100vw
-}
+html{overflow-x: hidden;}
+body{font-family: "Zen Kaku Gothic Antique", sans-serif;}
 .load-logo{transform: translateX(-50%);position: fixed;z-index: 1001;top: 40vh;left: 48vw; animation-name: load-logo;animation-fill-mode: forwards;animation-duration: 1.2s;width: 300px;height: auto;}
 @keyframes load-logo{0%{opacity: 1;}50%{opacity: 1;}100%{opacity: 0;}}
 .load-cover{background-color: #ffffff;position: fixed;top: 0;left: 0;z-index: 1000;width: 100vw;height: 1000vh;animation-name: load-cover;animation-fill-mode: both;animation-duration: 1s;animation-delay: 0.8s;box-shadow: #00000025 0px 20px 40px;}
@@ -18,7 +13,14 @@ a{text-decoration: none;}
 .links{margin: 40px 0 0 0;text-align: center;font-weight: bold;white-space: nowrap;}
 .oc-manu-h1{font-size: 25px;margin: 30px 0 30px 0;color: #000000;}
 
-.top{position:fixed;top: 0;right: 8px;width: 100%;height: 95vh;overflow: hidden;}
+.top{position:fixed;
+	top: 0;
+	right: 0;
+	left: 0;/*変更前は無し*/
+	width: calc(100% - 31px);/*変更前は100%*/
+	height: 95vh;
+	overflow: hidden;
+}
 .top-video{height: auto;width: 100%;transform: translateX(-50%);position: relative;left: 50vw;}
 @media screen and (max-width:1600px) {.top-video{height: 100vh;width: auto;}}
 .top-titele{color:#fff;font-size: 40px;position: absolute;top: 35vh;right: 5vw;font-weight: bold;}
@@ -43,9 +45,9 @@ a{text-decoration: none;}
 .heder-manu{width: 100vw;max-width: 1500px;margin: 0px auto 0px auto;}
 .heder-manu-td {font-size: 22px;text-align: center;border-left: solid 1px #dadada;border-right: solid 1px #dadada;margin-left: -5px;color: #000;cursor: pointer;}
 .heder-manu-td:hover{background-color: #00000012;transition: 0.2s;}
-.main{width: 100vw;background-color: #ffffff;position: absolute;top: 92vh;margin:0px -16px 0px -8px;}
+.main{width: 100%;background-color: #ffffff;position: absolute;top: 92vh;margin:0px -16px 0px -8px;}
 .main-in-1{width: 100%;max-width: 1000px;margin: 0 auto 0 auto;}
-.news{height: 500px;width: calc(100% - 30px);border-radius: 0px;margin: 0 15px 0 15px;border: solid #f1f1f1;border-width: 0 2px 0 2px;background-color: #f7f7f7;}
+.news{height: 500px;width: calc(100% - 30px);border-radius: 0px;margin: 0 15px 0 15px;border: solid #f1f1f1;border-width: 0 2px 0 2px;background-color: #f7f7f7;overflow-x: hidden;}
 
 #detayo1 {/*アニメーション初期値*/
 	background-color: #95e7f1;
@@ -241,10 +243,10 @@ a{text-decoration: none;}
 }
 .footer{
 	height: 150px;
-	width: calc(100vw);
+	width: 100%;
 	background-color: #1d1d1d;
 	color: #ffffff;
-	padding: 5px 0 5px 0;
+	padding: 5px 15px 5px 15px;
 	text-align: center;
 }
 .footer > p{
