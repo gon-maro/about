@@ -12,6 +12,7 @@ a{text-decoration: none;}
 .heder-manu{width: 100vw;max-width: 1500px;margin: 0 auto 0 auto;position: relative;top: -11px;}
 .heder-manu-td {font-size: 22px;text-align: center;color: #000;}
 .heder-manu-td-close{width: 120px;background-color: #95e7f1;height: 40px;}
+.heder-manu-td-close > button{background-color: #00000000;border: none;width: 100%;cursor: pointer;}
 .logo{height: 45px;width: auto;}
 
 .main{width: 97vw;max-width: 1000px;margin: 0 auto 0 auto;position: relative;top: 100px;background-color: 
