@@ -17,7 +17,7 @@ a{text-decoration: none;}
 	top: 0;
 	right: 0;
 	left: 0;/*変更前は無し*/
-	width: calc(100% - 31px);/*変更前は100%*/
+	width: calc(100%);/*変更前は100%*/
 	height: 95vh;
 	overflow: hidden;
 }
