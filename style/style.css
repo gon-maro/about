@@ -243,7 +243,7 @@ a{text-decoration: none;}
 }
 .footer{
 	height: 150px;
-	width: 100%;
+	width: calc(100% - 31px);
 	background-color: #1d1d1d;
 	color: #ffffff;
 	padding: 5px 15px 5px 15px;
