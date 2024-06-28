@@ -1,5 +1,5 @@
 html{overflow-x: hidden;}
-body{font-family: "Zen Kaku Gothic Antique", sans-serif;}
+body{font-family: "Zen Kaku Gothic Antique", sans-serif;  width:100vw;position:relative;overflow-x:hidden;}
 .load-logo{transform: translateX(-50%);position: fixed;z-index: 1001;top: 40vh;left: 48vw; animation-name: load-logo;animation-fill-mode: forwards;animation-duration: 1.2s;width: 300px;height: auto;}
 @keyframes load-logo{0%{opacity: 1;}50%{opacity: 1;}100%{opacity: 0;}}
 .load-cover{background-color: #ffffff;position: fixed;top: 0;left: 0;z-index: 1000;width: 100vw;height: 1000vh;animation-name: load-cover;animation-fill-mode: both;animation-duration: 1s;animation-delay: 0.8s;box-shadow: #00000025 0px 20px 40px;}
