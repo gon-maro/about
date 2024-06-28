@@ -1,5 +1,6 @@
 body{
 	font-family: "Zen Kaku Gothic Antique", sans-serif;
+	width:100%;
 	overflow-x: hidden;
 	background-color: #ffffff00;
 	animation-name: fadein;
