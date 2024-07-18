@@ -1,25 +1,47 @@
-let gazou1 = document.getElementById("detayo1");//動かす要素の変数宣言
-let gazou2 = document.getElementById("detayo2");//動かす要素の変数宣言
-let gazou3 = document.getElementById("detayo3");//動かす要素の変数宣言
+document.addEventListener('DOMContentLoaded', () => {
+    //動かす要素のクラスを取得
+    const elements1 = document.querySelectorAll('.detayo1');
+    const elements2 = document.querySelectorAll('.detayo2');
+    const elements3 = document.querySelectorAll('.detayo3');
 
-function kantan(entries) {
-    if (entries[0].intersectionRatio == 0) {
-        return;
-    }
-    else
-    {
-        gazou1.classList.add("alpha1");//動かす要素にクラスを付与
-        gazou2.classList.add("alpha2");//動かす要素にクラスを付与
-        gazou3.classList.add("alpha3");//動かす要素にクラスを付与
-    }
-};
+    const observerCallback = (entries, observer, fadeInClass) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(fadeInClass);
+                observer.unobserve(entry.target);
+            }
+        });
+    };
 
-let options = {
-    threshold:0.1
-};
+    //クラス付与
+    const observer1 = new IntersectionObserver((entries, observer) => {
+        observerCallback(entries, observer, 'fade-in1');
+    }, {
+        threshold: 0
+    });
 
-let observer = new IntersectionObserver(kantan,options);
+    const observer2 = new IntersectionObserver((entries, observer) => {
+        observerCallback(entries, observer, 'fade-in2');
+    }, {
+        threshold: 0
+    });
 
-observer.observe(gazou1);//観察開始
-observer.observe(gazou2);//観察開始
-observer.observe(gazou3);//観察開始
+    const observer3 = new IntersectionObserver((entries, observer) => {
+        observerCallback(entries, observer, 'fade-in3');
+    }, {
+        threshold: 0
+    });
+
+    //監査開始させる
+    elements1.forEach(element => {
+        observer1.observe(element);
+    });
+
+    elements2.forEach(element => {
+        observer2.observe(element);
+    });
+
+    elements3.forEach(element => {
+        observer3.observe(element);
+    });
+});
