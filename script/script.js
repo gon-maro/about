@@ -1,10 +1,17 @@
 //メニューのやつ
 $(function() {  
-    $(".A").click(function() 
-        {  $(".B").toggleClass("C");  
-
+    $(".A").click(function(){
+            $(".B").toggleClass("C");
+            $(".links").toggleClass("to-links");
         });
     });
+
+    $(function() {  
+        $(".A-link").click(function(){
+                $(".B").toggleClass("C");
+                $(".links").toggleClass("to-links");
+            });
+        });    
 
 
 //スクロール1//
