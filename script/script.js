@@ -2,19 +2,19 @@
 $(function() {  
     $(".A").click(function(){
             $(".B").toggleClass("C");
-            $(".links").toggleClass("to-links");
+            $(".oc-manu-h1").toggleClass("to-oc-manu-h1");
         });
     });
 
     $(function() {  
         $(".A-link").click(function(){
                 $(".B").toggleClass("C");
-                $(".links").toggleClass("to-links");
+                $(".oc-manu-h1").toggleClass("to-oc-manu-h1");
             });
         });    
 
 
-//スクロール1//
+//スクロール//
 const scroll_news = function () {
     const top = document.getElementById("news").getBoundingClientRect().top;
     window.scrollTo({
