@@ -9,10 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style-news.css">
 </head>
-<body>
+<body id="body">
     <p class="many-news-top">news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news </p>
     <p class="titele">News</p>
-    <div class="tab-wrap">
+    <div class="tab-wrap" id="main">
         <input id="TAB02-01" type="radio" name="TAB02" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB02-01">ちゃんとしてる</label>
         <div class="tab-content">
             <div class="content">
@@ -34,5 +34,26 @@
     </div>
 
     <p class="many-news-under">news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news news </p>
+    <script>
+        let gazou1 = document.getElementById("main");//動かす要素の変数宣言
+
+        function kantan(entries) {
+            if (entries[0].intersectionRatio == 0) {
+                return;
+            }
+            else
+            {
+                gazou1.classList.add("alpha1");//動かす要素にクラスを付与
+            }
+        };
+
+        let options = {
+            threshold:0.9
+        };
+
+        let observer = new IntersectionObserver(kantan,options);
+
+        observer.observe(gazou1);//観察開始
+    </script>
 </body>
 </html>
