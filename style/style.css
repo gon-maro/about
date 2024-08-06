@@ -2,18 +2,67 @@ html{overflow-x: hidden;}
 body{font-family: "Zen Kaku Gothic Antique", sans-serif;}
 .load-logo{transform: translateX(-50%);position: fixed;z-index: 1001;top: 40vh;left: 48vw; animation-name: load-logo;animation-fill-mode: forwards;animation-duration: 1.2s;width: 300px;height: auto;}
 @keyframes load-logo{0%{opacity: 1;}50%{opacity: 1;}90%{opacity: 0;}100%{opacity: 0;display: none;}}
-.load-cover{background-color: #ffffff;position: fixed;top: 0;left: 0;z-index: 1000;width: 100vw;height: 100vh;animation-name: load-cover;animation-fill-mode: both;animation-duration: 1s;animation-delay: 0.5s;box-shadow: #00000025 0px 20px 40px;animation-timing-function: cubic-bezier(.25,.01,0,.99);}
+.load-cover{background-color: #ffffff;position: fixed;top: 0;left: 0;z-index: 1000;width: 100vw;height: 100vh;animation-name: load-cover;animation-fill-mode: both;animation-duration: 1s;animation-delay: 0.5s;animation-timing-function: cubic-bezier(.68,0,.04,1.12);}
 @keyframes load-cover{0%{height: 100vh;}100%{height: 0vh;}}
 a{text-decoration: none;}
 
 .oc-manu{position: fixed;top: 30px;z-index: 100;width: 100vw;left: 0;}
 .A{background-color: #ff000000;width: 50px;height: 50px;margin-left: 30px;z-index: -1;position: relative;font-size: 30px;cursor: pointer;text-align: center;}
 .B > .A{margin-top: 30px;color: #fff;}
-.B{position: fixed;top: 0;width: 0;height: 100%;opacity: 0; overflow-x: hidden;transition: 0.7s;transition-timing-function: cubic-bezier(.22,1.12,.45,.99);backdrop-filter: Blur(15px);-webkit-backdrop-filter: blur(15px);background-color: #0a0a0a;}
-.C{display: block;height: 100%;width: calc(100vw);opacity: 1; position: fixed;top: 0;background-color: #0a0a0a;}
-.links{margin-top: 10px;font-weight: bold;white-space: nowrap;margin-left:40px;opacity: 0;transition: 0.7s;transition-delay: 0.1s;transform: scaleY(0);position: relative;top: -200px;}
-.to-links{opacity: 1;transform: scaleY(1);top: 0;}
+.B{position: fixed;top: 0;width: 100vw;height: 100%;opacity: 0; overflow-x: hidden;background-color: #000000dc;display: block;animation-name: close_manu;animation-duration: 0.3s;animation-fill-mode: forwards;backdrop-filter: blur(20px);-webkit-backdrop-filter: blur(20px);}
+@keyframes close_manu{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		display: none;
+		opacity: 0;
+	}
+}
+.C{animation-name: open_manu;animation-duration: 0.5s;animation-fill-mode: forwards;}
+@keyframes open_manu {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.links{margin-top: 10px;font-weight: bold;white-space: nowrap;margin-left:40px;}
 .oc-manu-h1{font-size: 25px;margin: 30px 0 30px 0;color: #ffffff;}
+.to-oc-manu-h1{
+	animation-name: manu-h1;
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+}
+@keyframes manu-h1{
+	0%{
+		transform: translateX(-30px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+.manulink-1{
+	animation-delay: 0.2s;
+}
+.manulink-2{
+	animation-delay: 0.28s;
+}
+.manulink-3{
+	animation-delay: 0.36s;
+}
+.manulink-4{
+	animation-delay: 0.44s;
+}
+.manulink-5{
+	animation-delay: 0.52s;
+}
+.manulink-6{
+	animation-delay: 0.6s;
+}
 
 .top{
 	position:fixed;
@@ -26,7 +75,7 @@ a{text-decoration: none;}
 }
 .top-video{height: auto;width: 100%;transform: translateX(-50%);position: relative;left: 50vw;}
 @media screen and (max-width:1600px) {.top-video{height: 100vh;width: auto;}}
-.top-titele{color:#fff;font-size: 40px;position: absolute;top: 35vh;right: 5vw;font-weight: bold;}
+.top-titele{color:#fff;font-size: 40px;position: absolute;top: 32vh;right: 5vw;font-weight: bold;}
 .movie{
 	width: 100vw;
 	overflow: hidden;
