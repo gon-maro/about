@@ -17,19 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer1 = new IntersectionObserver((entries, observer) => {
         observerCallback(entries, observer, 'fade-in1');
     }, {
-        threshold: 0
+        threshold: 0.15
     });
 
     const observer2 = new IntersectionObserver((entries, observer) => {
         observerCallback(entries, observer, 'fade-in2');
     }, {
-        threshold: 0
+        threshold: 0.15
     });
 
     const observer3 = new IntersectionObserver((entries, observer) => {
         observerCallback(entries, observer, 'fade-in3');
     }, {
-        threshold: 0
+        threshold: 0.15
     });
 
     //監査開始させる
