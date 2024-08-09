@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer3 = new IntersectionObserver((entries, observer) => {
         observerCallback(entries, observer, 'fade-in3');
     }, {
-        threshold: 0.15
+        threshold: 0.2
     });
 
     //監査開始させる
