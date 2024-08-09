@@ -180,11 +180,11 @@ a{text-decoration: none;}
 @keyframes point-img{
 	0%{
 		clip-path: circle(0%);
-		transform: rotateY(540deg);
+		transform: rotateY(270deg);
 	}
 	50%{
 		clip-path: circle(100%);
-		transform: rotateY(540deg);
+		transform: rotateY(270deg);
 	}
 	100%{
 		clip-path: circle(100%);
